@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Precision Grid Calculator - CodSoft Task 3</title>
+  <meta name="description" content="Interactive CSS Grid Calculator built with HTML5, CSS3, and JavaScript. CodSoft Web Development Internship Level 1 Task 3.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body data-theme="dark">
+
+  <!-- Top Navigation Bar -->
+  <header class="calc-header">
+    <div class="header-container">
+      <div class="brand">
+        <a href="../index.html" class="nav-back-btn" title="Back to Internship Hub">
+          <i class="fa-solid fa-arrow-left"></i>
+        </a>
+        <div class="brand-info">
+          <h1>CSS Grid Calculator</h1>
+          <span class="badge-tag">CodSoft Level 1 • Task 3</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <!-- Sound Effect Toggle -->
+        <button id="sound-toggle" class="icon-btn" title="Toggle Button Sound" aria-label="Toggle Sound">
+          <i class="fa-solid fa-volume-high"></i>
+        </button>
+
+        <!-- Theme Switcher -->
+        <button id="theme-toggle" class="icon-btn" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+
+        <!-- History Drawer Toggle -->
+        <button id="history-toggle" class="icon-btn" title="Toggle Calculation History" aria-label="Toggle History">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="calc-main">
+    <div class="calc-workspace">
+      <!-- CALCULATOR COMPONENT -->
+      <div class="calculator-card" id="calculator">
+
+        <!-- DISPLAY SCREEN -->
+        <div class="calculator-display" aria-live="polite">
+          <div class="display-top">
+            <span class="mode-badge">DEG</span>
+            <div class="expression" id="display-expression" title="Previous operation"></div>
+          </div>
+          <div class="display-bottom">
+            <span class="operator-indicator" id="current-op"></span>
+            <div class="current-value" id="display-main">0</div>
+          </div>
+        </div>
+
+        <!-- QUICK ACCESS / SECONDARY ROW -->
+        <div class="quick-row">
+          <button class="btn-tool" data-action="sqrt" title="Square Root (√)">√x</button>
+          <button class="btn-tool" data-action="pow" title="Square (x²)">x²</button>
+          <button class="btn-tool" data-action="pi" title="Pi (π)">π</button>
+          <button class="btn-tool" data-action="copy" title="Copy Current Result" id="copy-btn">
+            <i class="fa-regular fa-copy"></i>
+          </button>
+        </div>
+
+        <!-- BUTTONS GRID SYSTEM (CSS GRID) -->
+        <div class="buttons-grid">
+          <!-- Row 1 -->
+          <button class="calc-btn btn-danger" data-action="clear" title="All Clear (Esc)">AC</button>
+          <button class="calc-btn btn-func" data-action="delete" title="Delete Last Digit (Backspace)">⌫</button>
+          <button class="calc-btn btn-func" data-action="percent" title="Percentage (%)">%</button>
+          <button class="calc-btn btn-op" data-op="/" title="Division (÷)">÷</button>
+
+          <!-- Row 2 -->
+          <button class="calc-btn btn-num" data-num="7">7</button>
+          <button class="calc-btn btn-num" data-num="8">8</button>
+          <button class="calc-btn btn-num" data-num="9">9</button>
+          <button class="calc-btn btn-op" data-op="*" title="Multiplication (×)">×</button>
+
+          <!-- Row 3 -->
+          <button class="calc-btn btn-num" data-num="4">4</button>
+          <button class="calc-btn btn-num" data-num="5">5</button>
+          <button class="calc-btn btn-num" data-num="6">6</button>
+          <button class="calc-btn btn-op" data-op="-" title="Subtraction (-)">−</button>
+
+          <!-- Row 4 -->
+          <button class="calc-btn btn-num" data-num="1">1</button>
+          <button class="calc-btn btn-num" data-num="2">2</button>
+          <button class="calc-btn btn-num" data-num="3">3</button>
+          <button class="calc-btn btn-op" data-op="+" title="Addition (+)">+</button>
+
+          <!-- Row 5 -->
+          <button class="calc-btn btn-num" data-action="negate" title="Negate (±)">±</button>
+          <button class="calc-btn btn-num" data-num="0">0</button>
+          <button class="calc-btn btn-num" data-action="decimal">.</button>
+          <button class="calc-btn btn-equals" data-action="calculate" title="Calculate (= / Enter)">=</button>
+        </div>
+
+        <!-- Keyboard Hint Helper -->
+        <div class="calc-footer-hint">
+          <i class="fa-regular fa-keyboard"></i>
+          <span>Full keyboard support enabled (0-9, +, -, *, /, Enter, Backspace, Esc)</span>
+        </div>
+      </div>
+
+      <!-- CALCULATION HISTORY DRAWER -->
+      <aside class="history-panel" id="history-panel">
+        <div class="history-header">
+          <h3><i class="fa-solid fa-clock-rotate-left"></i> History</h3>
+          <button class="btn-clear-history" id="clear-history-btn" title="Clear History">
+            <i class="fa-regular fa-trash-can"></i>
+          </button>
+        </div>
+        <div class="history-list" id="history-list">
+          <div class="history-empty">
+            <i class="fa-solid fa-calculator"></i>
+            <p>No calculations yet.<br>Perform an operation to view history.</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <!-- COPY TOAST -->
+  <div class="copy-toast" id="copy-toast">Result copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

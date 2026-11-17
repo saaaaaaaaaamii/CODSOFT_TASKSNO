@@ -1,0 +1,87 @@
+import os
+
+target_dir = r"C:\Users\samik\.gemini\antigravity\scratch\codsoft-level-1\task-2-landing-page\assets"
+os.makedirs(target_dir, exist_ok=True)
+
+# 1. Hero Dashboard SVG illustration
+hero_svg = """<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 440" width="100%" height="100%">
+  <defs>
+    <linearGradient id="dbGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#ec4899"/>
+    </linearGradient>
+    <filter id="cardGlow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#06b6d4" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+
+  <!-- Main App Shell -->
+  <rect x="15" y="15" width="690" height="410" rx="16" fill="url(#dbGrad)" stroke="#334155" stroke-width="2" filter="url(#cardGlow)"/>
+
+  <!-- Top App Window Bar -->
+  <rect x="15" y="15" width="690" height="46" rx="16" fill="#1e293b"/>
+  <circle cx="45" cy="38" r="6" fill="#ef4444"/>
+  <circle cx="65" cy="38" r="6" fill="#f59e0b"/>
+  <circle cx="85" cy="38" r="6" fill="#10b981"/>
+  <rect x="120" y="27" width="280" height="22" rx="11" fill="#0f172a" stroke="#334155"/>
+  <text x="260" y="42" font-family="monospace" font-size="11" fill="#94a3b8" text-anchor="middle">https://dashboard.novacloud.io/prod/clusters</text>
+
+  <!-- Left Sidebar -->
+  <rect x="15" y="61" width="140" height="364" fill="#0b0f19" opacity="0.6"/>
+  <rect x="35" y="85" width="100" height="12" rx="4" fill="#3b82f6"/>
+  <rect x="35" y="115" width="80" height="10" rx="3" fill="#475569"/>
+  <rect x="35" y="140" width="85" height="10" rx="3" fill="#475569"/>
+  <rect x="35" y="165" width="70" height="10" rx="3" fill="#475569"/>
+  <rect x="35" y="190" width="90" height="10" rx="3" fill="#475569"/>
+  <rect x="35" y="215" width="75" height="10" rx="3" fill="#475569"/>
+  
+  <!-- Content Area -->
+  <!-- Stats Header Cards -->
+  <rect x="175" y="85" width="155" height="75" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="195" y="110" font-family="sans-serif" font-size="11" fill="#94a3b8">Active Clusters</text>
+  <text x="195" y="140" font-family="sans-serif" font-size="22" font-weight="bold" fill="#38bdf8">48 Nodes</text>
+
+  <rect x="345" y="85" width="155" height="75" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="365" y="110" font-family="sans-serif" font-size="11" fill="#94a3b8">Avg Latency</text>
+  <text x="365" y="140" font-family="sans-serif" font-size="22" font-weight="bold" fill="#34d399">18.4 ms</text>
+
+  <rect x="515" y="85" width="165" height="75" rx="10" fill="#1e293b" stroke="#334155"/>
+  <text x="535" y="110" font-family="sans-serif" font-size="11" fill="#94a3b8">Daily Bandwidth</text>
+  <text x="535" y="140" font-family="sans-serif" font-size="22" font-weight="bold" fill="#a78bfa">4.2 TB</text>
+
+  <!-- Big Interactive Chart Box -->
+  <rect x="175" y="175" width="505" height="150" rx="10" fill="#090d16" stroke="#1e293b"/>
+  <text x="195" y="202" font-family="sans-serif" font-size="13" font-weight="bold" fill="#f8fafc">Global Network Throughput (RPS)</text>
+  <text x="660" y="202" font-family="sans-serif" font-size="11" fill="#10b981" text-anchor="end">+28.4% Peak</text>
+  
+  <!-- Grid Lines -->
+  <line x1="195" y1="230" x2="660" y2="230" stroke="#1e293b" stroke-width="1"/>
+  <line x1="195" y1="265" x2="660" y2="265" stroke="#1e293b" stroke-width="1"/>
+  <line x1="195" y1="300" x2="660" y2="300" stroke="#1e293b" stroke-width="1"/>
+  
+  <!-- Wave / Line Chart -->
+  <path d="M 195 290 Q 250 240 310 270 T 430 220 T 540 240 T 660 195" fill="none" stroke="url(#neonCyan)" stroke-width="3.5"/>
+  <!-- Area fill under line -->
+  <path d="M 195 290 Q 250 240 310 270 T 430 220 T 540 240 T 660 195 L 660 305 L 195 305 Z" fill="url(#neonCyan)" opacity="0.12"/>
+
+  <!-- Live Deployment Stream -->
+  <rect x="175" y="340" width="505" height="70" rx="10" fill="#1e293b" stroke="#334155"/>
+  <circle cx="198" cy="375" r="7" fill="#10b981"/>
+  <text x="215" y="371" font-family="sans-serif" font-size="12" font-weight="bold" fill="#f8fafc">production-edge-sfo01</text>
+  <text x="215" y="389" font-family="sans-serif" font-size="10" fill="#94a3b8">Deployed commit #9f81a02 • Healthy 200 OK • 12 sec ago</text>
+  <rect x="580" y="358" width="85" height="30" rx="6" fill="#0284c7"/>
+  <text x="622" y="378" font-family="sans-serif" font-size="11" font-weight="bold" fill="#ffffff" text-anchor="middle">View Logs</text>
+</svg>"""
+
+with open(os.path.join(target_dir, "hero-dashboard.svg"), "w", encoding="utf-8") as f:
+    f.write(hero_svg)
+
+print("NovaCloud hero dashboard SVG generated successfully!")

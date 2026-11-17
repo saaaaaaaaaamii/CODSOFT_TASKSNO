@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 360" width="100%" height="100%">
+  <defs>
+    <linearGradient id="p3bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#27272a" />
+    </linearGradient>
+  </defs>
+  <rect width="600" height="360" rx="16" fill="url(#p3bg)"/>
+  <!-- Calculator Device body -->
+  <rect x="180" y="30" width="240" height="300" rx="20" fill="#09090b" stroke="#3f3f46" stroke-width="3"/>
+  <!-- Screen -->
+  <rect x="200" y="55" width="200" height="65" rx="10" fill="#18181b" stroke="#27272a"/>
+  <text x="385" y="80" font-family="monospace" font-size="13" fill="#71717a" text-anchor="end">1,240 × 8.5</text>
+  <text x="385" y="108" font-family="monospace" font-size="24" font-weight="bold" fill="#10b981" text-anchor="end">10,540</text>
+  <!-- Buttons Grid (4 cols, 4 rows) -->
+  <!-- Row 1 -->
+  <rect x="200" y="135" width="42" height="35" rx="8" fill="#ef4444"/>
+  <rect x="252" y="135" width="42" height="35" rx="8" fill="#3f3f46"/>
+  <rect x="304" y="135" width="42" height="35" rx="8" fill="#3f3f46"/>
+  <rect x="356" y="135" width="42" height="35" rx="8" fill="#f59e0b"/>
+  <!-- Row 2 -->
+  <rect x="200" y="180" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="252" y="180" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="304" y="180" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="356" y="180" width="42" height="35" rx="8" fill="#f59e0b"/>
+  <!-- Row 3 -->
+  <rect x="200" y="225" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="252" y="225" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="304" y="225" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="356" y="225" width="42" height="35" rx="8" fill="#f59e0b"/>
+  <!-- Row 4 -->
+  <rect x="200" y="270" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="252" y="270" width="42" height="35" rx="8" fill="#27272a"/>
+  <rect x="304" y="270" width="94" height="35" rx="8" fill="#10b981"/>
+  <text x="300" y="345" font-family="sans-serif" font-size="14" font-weight="bold" fill="#e4e4e7" text-anchor="middle">Interactive CSS Grid Calculator</text>
+</svg>

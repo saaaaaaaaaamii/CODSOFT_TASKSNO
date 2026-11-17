@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaCloud | Next-Gen Cloud Platform - CodSoft Task 2</title>
+  <meta name="description" content="NovaCloud is a high-speed edge cloud platform for modern software teams. Task 2 of CodSoft Web Development Internship.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <aside class="announcement-bar">
+    <div class="container announcement-content">
+      <span class="badge-new">NEW</span>
+      <span>NovaCloud 3.0 is live: Next-Gen Serverless Compute &amp; Global Edge Routing.</span>
+      <a href="#pricing" class="announcement-link">Explore Plans &rarr;</a>
+    </div>
+  </aside>
+
+  <!-- Sticky Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="nav-brand">
+        <div class="logo-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+        <span class="logo-text">Nova<strong>Cloud</strong></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-links" id="nav-links">
+        <a href="#features" class="nav-item">Features</a>
+        <a href="#architecture" class="nav-item">Architecture</a>
+        <a href="#metrics" class="nav-item">Metrics</a>
+        <a href="#pricing" class="nav-item">Pricing</a>
+        <a href="#testimonials" class="nav-item">Testimonials</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+      </nav>
+
+      <div class="nav-cta-group">
+        <a href="../task-1-portfolio/index.html" class="btn btn-ghost" title="Back to Task 1 Portfolio">
+          <i class="fa-solid fa-arrow-left"></i> Portfolio
+        </a>
+        <a href="#pricing" class="btn btn-primary">Start Free Trial</a>
+        <!-- Hamburger Button -->
+        <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-container">
+        <div class="hero-header-box">
+          <div class="hero-pill">
+            <i class="fa-solid fa-bolt-lightning text-accent"></i>
+            <span>Level 1 • Task 2 Landing Page Project</span>
+          </div>
+          <h1 class="hero-title">
+            Deploy Faster. Scale Globally.<br>
+            <span class="gradient-text">Zero Infrastructure Friction.</span>
+          </h1>
+          <p class="hero-description">
+            NovaCloud provides an ultrafast edge deployment network for frontend applications, microservices, and serverless databases. Automatic SSL, git-integrated CI/CD, and worldwide low-latency replication in one seamless dashboard.
+          </p>
+
+          <div class="hero-form-wrapper">
+            <form id="hero-signup-form" class="hero-form" onsubmit="event.preventDefault(); alert('Demo Trial Activated! Welcome to NovaCloud.');">
+              <div class="input-icon-box">
+                <i class="fa-regular fa-envelope"></i>
+                <input type="email" placeholder="Enter your work email..." required>
+              </div>
+              <button type="submit" class="btn btn-primary">Claim 30-Day Free Trial</button>
+            </form>
+            <p class="form-disclaimer"><i class="fa-solid fa-lock"></i> No credit card required • Instant automated setup in 60s</p>
+          </div>
+        </div>
+
+        <!-- Hero Dashboard Mockup -->
+        <div class="hero-preview-wrapper">
+          <div class="hero-card-glow"></div>
+          <img src="assets/hero-dashboard.svg" alt="NovaCloud Interactive Dashboard Preview" class="hero-dashboard-img">
+        </div>
+
+        <!-- Social Proof Logos -->
+        <div class="trusted-bar">
+          <p class="trusted-title">POWERING SCALE AT INDUSTRY INNOVATORS</p>
+          <div class="trusted-logos">
+            <span class="partner-logo"><i class="fa-brands fa-github"></i> GitHub Enterprise</span>
+            <span class="partner-logo"><i class="fa-brands fa-react"></i> React Ecosystem</span>
+            <span class="partner-logo"><i class="fa-brands fa-stripe"></i> Stripe Billing</span>
+            <span class="partner-logo"><i class="fa-brands fa-docker"></i> Docker Hub</span>
+            <span class="partner-logo"><i class="fa-brands fa-aws"></i> AWS GovCloud</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- METRICS STRIP (4-Column Layout) -->
+    <section class="metrics-section" id="metrics">
+      <div class="container">
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <span class="metric-val">99.999%</span>
+            <span class="metric-label">Guaranteed High Uptime SLA</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val">&lt; 18ms</span>
+            <span class="metric-label">Average Global Edge Latency</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val">120+</span>
+            <span class="metric-label">Global Point of Presence (PoPs)</span>
+          </div>
+          <div class="metric-card">
+            <span class="metric-val">10M+</span>
+            <span class="metric-label">Daily API Requests Processed</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES SECTION (3-Column Grid Layout) -->
+    <section class="section features-section" id="features">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="pill-subtitle">Core Capabilities</span>
+          <h2 class="section-heading">Everything You Need To Build &amp; Deploy At Scale</h2>
+          <p class="section-desc">Engineered for developer velocity, resilient infrastructure, and unmatched global response times.</p>
+        </div>
+
+        <div class="features-grid">
+          <!-- Card 1 -->
+          <div class="feature-box">
+            <div class="feature-icon icon-blue">
+              <i class="fa-solid fa-code-commit"></i>
+            </div>
+            <h3 class="feature-title">Instant Git CI/CD</h3>
+            <p class="feature-text">
+              Every push to GitHub or GitLab triggers an instant preview build with automatic CDN edge caching and SSL certificate provisioning.
+            </p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-check"></i> Zero-downtime rolling deploys</li>
+              <li><i class="fa-solid fa-check"></i> Isolated preview URLs for PRs</li>
+            </ul>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feature-box">
+            <div class="feature-icon icon-cyan">
+              <i class="fa-solid fa-globe"></i>
+            </div>
+            <h3 class="feature-title">Worldwide Edge Anycast</h3>
+            <p class="feature-text">
+              Route every user request to the nearest edge datacenter across 6 continents. Drastically eliminate network hops and TTFB lag.
+            </p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-check"></i> Smart BGP Anycast routing</li>
+              <li><i class="fa-solid fa-check"></i> Automatic asset minification</li>
+            </ul>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feature-box">
+            <div class="feature-icon icon-purple">
+              <i class="fa-solid fa-shield-virus"></i>
+            </div>
+            <h3 class="feature-title">Enterprise Shield Security</h3>
+            <p class="feature-text">
+              Built-in layer 3/4 and layer 7 DDoS mitigation, Web Application Firewall (WAF), automated TLS rotation, and SOC 2 Type II compliance.
+            </p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-check"></i> Dedicated IP firewalls</li>
+              <li><i class="fa-solid fa-check"></i> Role-based RBAC access</li>
+            </ul>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feature-box">
+            <div class="feature-icon icon-orange">
+              <i class="fa-solid fa-microchip"></i>
+            </div>
+            <h3 class="feature-title">Serverless Edge Functions</h3>
+            <p class="feature-text">
+              Run Node.js, Python, or WebAssembly functions directly at the edge with cold-start times under 15 milliseconds.
+            </p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-check"></i> Sub-millisecond compute billing</li>
+              <li><i class="fa-solid fa-check"></i> Automatic memory scaling</li>
+            </ul>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feature-box">
+            <div class="feature-icon icon-green">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <h3 class="feature-title">Real-Time Observability</h3>
+            <p class="feature-text">
+              Inspect live request logs, CPU/Memory telemetry, error stack traces, and anomaly alerts with zero configuration required.
+            </p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-check"></i> 100% trace retention</li>
+              <li><i class="fa-solid fa-check"></i> Slack &amp; Webhook alerts</li>
+            </ul>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feature-box">
+            <div class="feature-icon icon-indigo">
+              <i class="fa-solid fa-database"></i>
+            </div>
+            <h3 class="feature-title">Global Database Replicas</h3>
+            <p class="feature-text">
+              Synchronize PostgreSQL and Redis data stores globally with continuous point-in-time recovery and sub-millisecond query responses.
+            </p>
+            <ul class="feature-bullets">
+              <li><i class="fa-solid fa-check"></i> Automated daily snapshot backups</li>
+              <li><i class="fa-solid fa-check"></i> Read replica auto-balancing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE / CODE DEMO SECTION (2-Column Layout) -->
+    <section class="section arch-section" id="architecture">
+      <div class="container">
+        <div class="arch-grid">
+          <div class="arch-content">
+            <span class="pill-subtitle">Developer Experience</span>
+            <h2 class="section-heading">Deploy With A Single Config File</h2>
+            <p class="section-desc">
+              No complex Kubernetes yaml or Terraform boilerplates. Just drop a <code>novacloud.yaml</code> in your repository root and let our edge orchestrator handle compilation, image building, routing, and canary deployments.
+            </p>
+            <div class="arch-checklist">
+              <div class="check-item">
+                <i class="fa-solid fa-circle-check text-accent"></i>
+                <div>
+                  <strong>Declarative Infrastructure as Code</strong>
+                  <p>Version control your environment variables, domains, and regions in code.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <i class="fa-solid fa-circle-check text-accent"></i>
+                <div>
+                  <strong>Zero-Downtime Rollbacks</strong>
+                  <p>Instant 1-click rollback to any previous commit if an issue is detected.</p>
+                </div>
+              </div>
+              <div class="check-item">
+                <i class="fa-solid fa-circle-check text-accent"></i>
+                <div>
+                  <strong>Branch-Based Environments</strong>
+                  <p>Every Git branch automatically gets its own isolated staging URL.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="code-terminal-wrapper">
+            <div class="terminal-bar">
+              <div class="term-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <span class="term-title">novacloud.yaml — configuration</span>
+              <span class="term-lang">YAML</span>
+            </div>
+            <pre class="terminal-body"><code><span class="cm"># NovaCloud Cluster Orchestration Specification</span>
+<span class="k">version</span>: <span class="s">"3.0"</span>
+<span class="k">service</span>: <span class="s">"web-frontend-api"</span>
+
+<span class="k">runtime</span>:
+  <span class="k">framework</span>: <span class="s">"react-spa"</span>
+  <span class="k">node_version</span>: <span class="s">"22.x"</span>
+  <span class="k">build_command</span>: <span class="s">"npm run build"</span>
+  <span class="k">output_dir</span>: <span class="s">"dist"</span>
+
+<span class="k">deploy</span>:
+  <span class="k">strategy</span>: <span class="s">"rolling-canary"</span>
+  <span class="k">regions</span>:
+    - <span class="s">"iad1"</span> <span class="cm"># US-East (Virginia)</span>
+    - <span class="s">"fra1"</span> <span class="cm"># EU-Central (Frankfurt)</span>
+    - <span class="s">"sin1"</span> <span class="cm"># AP-South (Singapore)</span>
+
+<span class="k">security</span>:
+  <span class="k">auto_tls</span>: <span class="nb">true</span>
+  <span class="k">ddos_protection</span>: <span class="s">"strict"</span>
+  <span class="k">csp_headers</span>: <span class="s">"enforced"</span></code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING SECTION (3-Column Layout with Toggle) -->
+    <section class="section pricing-section" id="pricing">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="pill-subtitle">Simple, Transparent Pricing</span>
+          <h2 class="section-heading">Choose The Tier That Matches Your Ambition</h2>
+          <p class="section-desc">Scale seamlessly from weekend side projects to enterprise applications serving millions.</p>
+
+          <!-- Billing Cycle Switch -->
+          <div class="billing-toggle-container">
+            <span class="billing-label" id="label-monthly">Monthly</span>
+            <button class="toggle-switch" id="billing-switch" aria-label="Toggle Monthly or Annual Billing">
+              <span class="toggle-slider"></span>
+            </button>
+            <span class="billing-label" id="label-annual">Annual <span class="discount-badge">Save 20%</span></span>
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <!-- Tier 1: Starter -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="tier-name">Starter</h3>
+              <p class="tier-desc">Ideal for personal portfolios, student projects, and testing.</p>
+              <div class="price-box">
+                <span class="currency">$</span>
+                <span class="price-val" data-monthly="0" data-annual="0">0</span>
+                <span class="billing-period">/ month</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check text-accent"></i> 3 Deployed Projects</li>
+              <li><i class="fa-solid fa-check text-accent"></i> 100 GB Global Bandwidth</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Automatic Free SSL Certs</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Community Discord Support</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Custom Domain SLA</li>
+              <li class="disabled"><i class="fa-solid fa-xmark"></i> Dedicated Database Cluster</li>
+            </ul>
+            <a href="#hero" class="btn btn-outline btn-block">Get Started Free</a>
+          </div>
+
+          <!-- Tier 2: Pro (Featured) -->
+          <div class="pricing-card featured">
+            <div class="popular-ribbon">Most Popular</div>
+            <div class="pricing-header">
+              <h3 class="tier-name">Developer Pro</h3>
+              <p class="tier-desc">Engineered for production apps, scaling startups, and agencies.</p>
+              <div class="price-box">
+                <span class="currency">$</span>
+                <span class="price-val" data-monthly="29" data-annual="23">29</span>
+                <span class="billing-period">/ month</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check text-accent"></i> Unlimited Deployed Sites</li>
+              <li><i class="fa-solid fa-check text-accent"></i> 1 TB High-Speed Bandwidth</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Custom Domains &amp; Wildcard SSL</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Unlimited Edge Functions</li>
+              <li><i class="fa-solid fa-check text-accent"></i> 99.99% Uptime Guarantee</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Priority 24/7 Email &amp; Chat Support</li>
+            </ul>
+            <a href="#hero" class="btn btn-primary btn-block">Start 14-Day Free Trial</a>
+          </div>
+
+          <!-- Tier 3: Enterprise -->
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="tier-name">Enterprise</h3>
+              <p class="tier-desc">Custom infrastructure, dedicated clusters, and compliance.</p>
+              <div class="price-box">
+                <span class="currency">$</span>
+                <span class="price-val" data-monthly="99" data-annual="79">99</span>
+                <span class="billing-period">/ month</span>
+              </div>
+            </div>
+            <ul class="pricing-features">
+              <li><i class="fa-solid fa-check text-accent"></i> Dedicated High-Memory Nodes</li>
+              <li><i class="fa-solid fa-check text-accent"></i> 10 TB+ Multi-Cloud Bandwidth</li>
+              <li><i class="fa-solid fa-check text-accent"></i> SOC2 &amp; HIPAA Compliance</li>
+              <li><i class="fa-solid fa-check text-accent"></i> 99.999% SLA with Financial Guarantee</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Dedicated Account Manager</li>
+              <li><i class="fa-solid fa-check text-accent"></i> Custom SAML/SSO Authentication</li>
+            </ul>
+            <a href="#hero" class="btn btn-outline btn-block">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION (3-Column Layout) -->
+    <section class="section testimonials-section" id="testimonials">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="pill-subtitle">Loved By Developers</span>
+          <h2 class="section-heading">What Top Engineers Are Saying</h2>
+          <p class="section-desc">Over 50,000 developers across the globe rely on NovaCloud every single day.</p>
+        </div>
+
+        <div class="testimonials-grid">
+          <!-- Review 1 -->
+          <div class="testimonial-card">
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "Switching our frontend fleet to NovaCloud reduced our global TTFB from 220ms down to 24ms. Our deployment times dropped by 75% on day one."
+            </p>
+            <div class="author-block">
+              <div class="author-avatar bg-indigo">AR</div>
+              <div>
+                <h4 class="author-name">Alex Rivera</h4>
+                <p class="author-role">Staff Frontend Engineer, FinTech OS</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 2 -->
+          <div class="testimonial-card">
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "The branch preview feature completely revolutionized our code review workflow. Our designers and QA inspect live URLs for every pull request."
+            </p>
+            <div class="author-block">
+              <div class="author-avatar bg-cyan">SC</div>
+              <div>
+                <h4 class="author-name">Sarah Chen</h4>
+                <p class="author-role">Head of Product, SaaS Velocity</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Review 3 -->
+          <div class="testimonial-card">
+            <div class="star-rating">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            </div>
+            <p class="testimonial-quote">
+              "As a developer building for the CodSoft Web Development internship, studying NovaCloud's modern column layout and UI gave me massive inspiration."
+            </p>
+            <div class="author-block">
+              <div class="author-avatar bg-purple">MD</div>
+              <div>
+                <h4 class="author-name">Marcus Davis</h4>
+                <p class="author-role">Full-Stack Intern, CodSoft Community</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ SECTION (Accordion Interface) -->
+    <section class="section faq-section" id="faq">
+      <div class="container">
+        <div class="section-title-wrap">
+          <span class="pill-subtitle">Got Questions?</span>
+          <h2 class="section-heading">Frequently Asked Questions</h2>
+          <p class="section-desc">Clear answers to common questions about deployment, pricing, and infrastructure.</p>
+        </div>
+
+        <div class="faq-container">
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does NovaCloud compare to traditional cloud hosts?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>NovaCloud integrates build steps, edge delivery, SSL provisioning, and global DNS routing into an automated pipeline. You don't need to configure virtual machines, nginx configs, or complex container networks.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can I use my own custom domain on the free tier?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! Even on the Starter plan, you can connect your custom domain with automatic Let's Encrypt TLS/SSL certificates and instant DNS verification.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What frameworks and runtimes are supported?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>NovaCloud natively supports React, Next.js, Vue, Nuxt, Svelte, static HTML/CSS/JS, Vite, Astro, Node.js APIs, Python Flask/FastAPI, and Docker containers.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is this landing page built entirely with HTML, CSS, and JS?</span>
+              <i class="fa-solid fa-chevron-down faq-arrow"></i>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! This landing page satisfies all criteria for <strong>CodSoft Web Development Internship Level 1 Task 2</strong>. It showcases advanced column layouts, CSS Grid, Flexbox, responsive typography, and smooth interactive DOM events.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION (CTA) SECTION -->
+    <section class="cta-banner-section">
+      <div class="container">
+        <div class="cta-banner-box">
+          <div class="cta-decor-circle"></div>
+          <h2 class="cta-headline">Ready To Experience Lightning-Fast Deployments?</h2>
+          <p class="cta-sub">Join thousands of software engineers building the next generation of web applications today.</p>
+          <div class="cta-buttons">
+            <a href="#hero" class="btn btn-light-glow"><i class="fa-solid fa-rocket"></i> Get Started For Free</a>
+            <a href="../task-3-calculator/index.html" class="btn btn-outline-white">Explore Task 3: Calculator &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- MULTI-COLUMN FOOTER -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <!-- Col 1: Brand & Bio -->
+      <div class="footer-col col-brand">
+        <div class="nav-brand">
+          <div class="logo-icon"><i class="fa-solid fa-cloud-bolt"></i></div>
+          <span class="logo-text">Nova<strong>Cloud</strong></span>
+        </div>
+        <p class="footer-desc">
+          Next-generation edge cloud deployment platform. Crafted for high-performance engineering teams and learners.
+        </p>
+        <div class="footer-internship-tag">
+          <i class="fa-solid fa-graduation-cap"></i> CodSoft Level 1 • Task 2 Landing Page
+        </div>
+      </div>
+
+      <!-- Col 2: Product -->
+      <div class="footer-col">
+        <h4>Product</h4>
+        <ul>
+          <li><a href="#features">Edge Routing</a></li>
+          <li><a href="#architecture">CI/CD Pipeline</a></li>
+          <li><a href="#metrics">Global Telemetry</a></li>
+          <li><a href="#pricing">Pricing Plans</a></li>
+          <li><a href="#faq">Enterprise SLA</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Resources -->
+      <div class="footer-col">
+        <h4>Internship Tasks</h4>
+        <ul>
+          <li><a href="../task-1-portfolio/index.html">Task 1: Portfolio</a></li>
+          <li><a href="#hero">Task 2: Landing Page</a></li>
+          <li><a href="../task-3-calculator/index.html">Task 3: Calculator</a></li>
+          <li><a href="../index.html">CodSoft Master Hub</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Newsletter -->
+      <div class="footer-col">
+        <h4>Stay Updated</h4>
+        <p class="footer-subtext">Subscribe to our developer dispatch for edge compute insights and tutorials.</p>
+        <form class="footer-newsletter" onsubmit="event.preventDefault(); alert('Subscribed to developer updates!');">
+          <input type="email" placeholder="dev@company.com" required>
+          <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom-bar">
+      <div class="container footer-bottom-layout">
+        <p>&copy; 2026 NovaCloud Technologies. Created by Samik for CodSoft Internship.</p>
+        <div class="footer-social-row">
+          <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

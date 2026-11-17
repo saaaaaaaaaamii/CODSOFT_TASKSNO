@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodSoft Web Development Internship - Level 1 Showcase</title>
+  <meta name="description" content="CodSoft Web Development Virtual Internship - Level 1 Completed Tasks: Portfolio, Landing Page, and Calculator.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    :root {
+      --bg: #090e1a;
+      --card-bg: #111a2e;
+      --card-hover: #16223b;
+      --border: #1f2f4e;
+      --border-light: #2c416c;
+      --primary: #3b82f6;
+      --accent: #06b6d4;
+      --accent-green: #10b981;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --font-main: 'Plus Jakarta Sans', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--font-main);
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding-bottom: 5rem;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    .header-hero {
+      background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.25) 0%, transparent 70%);
+      padding: 4.5rem 1.5rem 3rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .badge-internship {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(6, 182, 212, 0.12);
+      border: 1px solid rgba(6, 182, 212, 0.35);
+      color: #38bdf8;
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+    }
+
+    .main-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .gradient-txt {
+      background: linear-gradient(135deg, #60a5fa, #38bdf8, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .main-subtitle {
+      max-width: 680px;
+      margin: 0 auto 2rem;
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    .status-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 1.5rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 0.75rem 1.75rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .status-strip strong { color: var(--accent-green); }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 3rem 1.5rem;
+    }
+
+    .section-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      font-size: 1rem;
+    }
+
+    /* Tasks Grid */
+    .tasks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    .task-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.25s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .task-card:hover {
+      transform: translateY(-8px);
+      border-color: var(--primary);
+      box-shadow: 0 15px 40px rgba(59, 130, 246, 0.2);
+    }
+
+    .task-preview {
+      aspect-ratio: 16 / 10;
+      background: #060a12;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .task-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .task-card:hover .task-preview img {
+      transform: scale(1.04);
+    }
+
+    .task-badge-overlay {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      padding: 0.3rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
+
+    .task-body {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .task-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .task-description {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+      line-height: 1.6;
+    }
+
+    .task-features-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.45rem;
+      margin-bottom: 1.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.85rem;
+      color: #cbd5e1;
+    }
+
+    .task-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .task-features-list i { color: var(--accent-green); }
+
+    .btn-group {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      flex: 1;
+      text-align: center;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #0284c7, var(--primary));
+      color: #ffffff;
+    }
+
+    .btn-primary:hover {
+      filter: brightness(1.15);
+      transform: translateY(-2px);
+    }
+
+    .btn-secondary {
+      background: var(--card-hover);
+      border: 1px solid var(--border-light);
+      color: var(--text);
+    }
+
+    .btn-secondary:hover {
+      background: #203152;
+    }
+
+    /* Interactive Live Frame Preview */
+    .preview-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 2.25rem;
+      margin-bottom: 4rem;
+    }
+
+    .preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .preview-tabs {
+      display: flex;
+      gap: 0.5rem;
+      background: #090e1a;
+      padding: 0.4rem;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .tab-btn {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      padding: 0.55rem 1.25rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .tab-btn.active {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .frame-container {
+      width: 100%;
+      height: 650px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      background: #000;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .frame-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* Submission Checklist & Instructions */
+    .submission-guide-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+
+    .guide-box {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+    }
+
+    .guide-box h3 {
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      color: #38bdf8;
+    }
+
+    .guide-box ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+      font-size: 0.92rem;
+      color: var(--text-muted);
+    }
+
+    .guide-box li strong { color: var(--text); }
+    .guide-box li i { color: var(--accent-green); margin-right: 0.5rem; }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+    }
+
+    @media (max-width: 992px) {
+      .tasks-grid,
+      .submission-guide-grid {
+        grid-template-columns: 1fr;
+      }
+      .main-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Hero Header -->
+  <header class="header-hero">
+    <div class="badge-internship">
+      <i class="fa-solid fa-graduation-cap"></i> CodSoft Virtual Internship Program • Web Development
+    </div>
+    <h1 class="main-title">
+      Level 1 Internship <span class="gradient-txt">Complete Project Suite</span>
+    </h1>
+    <p class="main-subtitle">
+      All three official Level 1 tasks engineered with modern HTML5, responsive CSS3 (Grid &amp; Flexbox), and event-driven JavaScript. Live, interactive, and ready for GitHub &amp; LinkedIn submission.
+    </p>
+    <div class="status-strip">
+      <span>Status: <strong>All 3 Tasks Working</strong></span>
+      <span>•</span>
+      <span>Track: <strong>Level 1 Web Development</strong></span>
+      <span>•</span>
+      <span>Repo Ready: <strong>CODSOFT_TASKSNO</strong></span>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 class="section-title">Internship Tasks Overview</h2>
+    <p class="section-subtitle">Click "Launch Project" to open each task in full view, or interact with the live frame below.</p>
+
+    <!-- Tasks Grid -->
+    <div class="tasks-grid">
+
+      <!-- TASK 1: PORTFOLIO -->
+      <article class="task-card">
+        <div class="task-preview">
+          <img src="task-1-portfolio/assets/projects/project1.svg" alt="Task 1 Portfolio Thumbnail">
+          <span class="task-badge-overlay">Task 1</span>
+        </div>
+        <div class="task-body">
+          <h3 class="task-title">Personal Portfolio</h3>
+          <p class="task-description">
+            A comprehensive, fully responsive personal developer portfolio featuring bio, animated skill progress meters, project showcases, PDF resume download, and a validated contact form.
+          </p>
+          <ul class="task-features-list">
+            <li><i class="fa-solid fa-check"></i> Header, About, Skills, Projects, Resume &amp; Contact</li>
+            <li><i class="fa-solid fa-check"></i> Dark &amp; Light theme mode with local persistence</li>
+            <li><i class="fa-solid fa-check"></i> Downloadable formal PDF resume file</li>
+            <li><i class="fa-solid fa-check"></i> Category filter tabs &amp; mobile hamburger menu</li>
+          </ul>
+          <div class="btn-group">
+            <a href="task-1-portfolio/index.html" class="btn btn-primary" target="_blank">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Launch Project
+            </a>
+            <button class="btn btn-secondary" onclick="loadPreview('task-1-portfolio/index.html', this)">
+              <i class="fa-solid fa-eye"></i> Quick View
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- TASK 2: LANDING PAGE -->
+      <article class="task-card">
+        <div class="task-preview">
+          <img src="task-1-portfolio/assets/projects/project2.svg" alt="Task 2 Landing Page Thumbnail">
+          <span class="task-badge-overlay">Task 2</span>
+        </div>
+        <div class="task-body">
+          <h3 class="task-title">NovaCloud Landing Page</h3>
+          <p class="task-description">
+            A high-converting SaaS landing page highlighting multi-column layouts, CSS Grid feature boxes, monthly/annual interactive pricing switch, testimonials, and an FAQ accordion.
+          </p>
+          <ul class="task-features-list">
+            <li><i class="fa-solid fa-check"></i> Multi-column sections &amp; aligned boxes</li>
+            <li><i class="fa-solid fa-check"></i> Interactive Monthly / Annual pricing switch</li>
+            <li><i class="fa-solid fa-check"></i> Expandable FAQ accordion &amp; sticky blur header</li>
+            <li><i class="fa-solid fa-check"></i> 100% responsive without overlapping elements</li>
+          </ul>
+          <div class="btn-group">
+            <a href="task-2-landing-page/index.html" class="btn btn-primary" target="_blank">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Launch Project
+            </a>
+            <button class="btn btn-secondary" onclick="loadPreview('task-2-landing-page/index.html', this)">
+              <i class="fa-solid fa-eye"></i> Quick View
+            </button>
+          </div>
+        </div>
+      </article>
+
+      <!-- TASK 3: CALCULATOR -->
+      <article class="task-card">
+        <div class="task-preview">
+          <img src="task-1-portfolio/assets/projects/project3.svg" alt="Task 3 Calculator Thumbnail">
+          <span class="task-badge-overlay">Task 3</span>
+        </div>
+        <div class="task-body">
+          <h3 class="task-title">CSS Grid Calculator</h3>
+          <p class="task-description">
+            A sleek, interactive calculator utilizing CSS Grid for button alignments. Features dual-line screen display, full keyboard input support, sound synthesis, and calculation history log.
+          </p>
+          <ul class="task-features-list">
+            <li><i class="fa-solid fa-check"></i> CSS Grid system for button layout (+, -, ×, ÷)</li>
+            <li><i class="fa-solid fa-check"></i> Dual screen: active expression &amp; live result</li>
+            <li><i class="fa-solid fa-check"></i> Keyboard support &amp; click sound synthesis</li>
+            <li><i class="fa-solid fa-check"></i> Calculation history with 1-click value restore</li>
+          </ul>
+          <div class="btn-group">
+            <a href="task-3-calculator/index.html" class="btn btn-primary" target="_blank">
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Launch Project
+            </a>
+            <button class="btn btn-secondary" onclick="loadPreview('task-3-calculator/index.html', this)">
+              <i class="fa-solid fa-eye"></i> Quick View
+            </button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- Interactive Live Frame Preview -->
+    <section class="preview-section">
+      <div class="preview-header">
+        <div>
+          <h3 style="font-size: 1.35rem; font-weight: 700;">Live Interactive Workspace</h3>
+          <p style="color: var(--text-muted); font-size: 0.9rem;">Test and interact with any task right inside this window.</p>
+        </div>
+        <div class="preview-tabs">
+          <button class="tab-btn active" id="tab-t1" onclick="switchTab('task-1-portfolio/index.html', 'tab-t1')">Task 1: Portfolio</button>
+          <button class="tab-btn" id="tab-t2" onclick="switchTab('task-2-landing-page/index.html', 'tab-t2')">Task 2: Landing Page</button>
+          <button class="tab-btn" id="tab-t3" onclick="switchTab('task-3-calculator/index.html', 'tab-t3')">Task 3: Calculator</button>
+        </div>
+      </div>
+      <div class="frame-container">
+        <iframe id="preview-iframe" src="task-1-portfolio/index.html" title="Interactive Project Preview"></iframe>
+      </div>
+    </section>
+
+    <!-- CodSoft Official Submission Guide -->
+    <section>
+      <h2 class="section-title">CodSoft Internship Submission Guide</h2>
+      <p class="section-subtitle">Official checklist to submit your project repository and complete your internship evaluation.</p>
+
+      <div class="submission-guide-grid">
+        <div class="guide-box">
+          <h3><i class="fa-brands fa-github"></i> 1. GitHub Repository Instructions</h3>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> <strong>Repository Name:</strong> Create a GitHub repo named <code>CODSOFT_TASKSNO</code> (or <code>CODSOFT_LEVEL1</code>).</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Directory Organization:</strong> Include <code>task-1-portfolio/</code>, <code>task-2-landing-page/</code>, and <code>task-3-calculator/</code>.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>GitHub Pages (Optional/Recommended):</strong> Enable GitHub Pages in repository settings so anyone can view live demos!</li>
+            <li><i class="fa-solid fa-check"></i> <strong>README.md:</strong> A complete Markdown README is generated with project descriptions, live links, and tech stacks.</li>
+          </ul>
+        </div>
+
+        <div class="guide-box">
+          <h3><i class="fa-brands fa-linkedin"></i> 2. LinkedIn Video Post Instructions</h3>
+          <ul>
+            <li><i class="fa-solid fa-check"></i> <strong>Screen Recording:</strong> Record a brief 1 to 2 minute demo video walking through each task.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Tagging:</strong> Tag <code>@CodSoft</code> in your LinkedIn post.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Required Hashtags:</strong> Include <code>#codsoft</code>, <code>#internship</code>, <code>#webdevelopment</code>.</li>
+            <li><i class="fa-solid fa-check"></i> <strong>Form Submission:</strong> Paste your GitHub repo link and LinkedIn video post link into the CodSoft Task Submission Form sent to your email.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 CodSoft Web Development Virtual Internship • Level 1 Completed with Distinction.</p>
+    </footer>
+  </main>
+
+  <script>
+    function loadPreview(url, btn) {
+      document.getElementById('preview-iframe').src = url;
+      // Scroll to preview
+      document.querySelector('.preview-section').scrollIntoView({ behavior: 'smooth' });
+
+      // Update active tab styling
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      if (url.includes('task-1')) document.getElementById('tab-t1').classList.add('active');
+      else if (url.includes('task-2')) document.getElementById('tab-t2').classList.add('active');
+      else if (url.includes('task-3')) document.getElementById('tab-t3').classList.add('active');
+    }
+
+    function switchTab(url, tabId) {
+      document.getElementById('preview-iframe').src = url;
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
