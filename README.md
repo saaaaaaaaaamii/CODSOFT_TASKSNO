@@ -1,16 +1,23 @@
 # CodSoft Web Development Internship — Level 1 Project Suite
 
+[![CodSoft Internship](https://img.shields.io/badge/CodSoft-Web%20Development%20Internship-blue?style=for-the-badge&logo=code)](https://github.com/saaaaaaaaaamii/CODSOFT_TASKSNO)
+[![GitHub Pages](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?style=for-the-badge&logo=github)](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/)
+[![Level 1 Completed](https://img.shields.io/badge/Status-Level%201%20Completed-brightgreen?style=for-the-badge)](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/)
+
 Welcome to the **CodSoft Web Development Virtual Internship (Level 1)** project repository. This repository contains the complete source code, responsive designs, and interactive implementations for all three Level 1 tasks.
 
 ---
 
-## 🚀 Projects Overview
+## 🌐 Live Interactive Deployments (GitHub Pages)
 
-| Task # | Project Name | Technologies | Key Features |
+Experience the live interactive versions of all three tasks directly in your browser:
+
+| Task # | Project Name | Live Demo Link | Technologies |
 | :--- | :--- | :--- | :--- |
-| **Task 1** | [Personal Developer Portfolio](./task-1-portfolio/) | HTML5, CSS3, JS (ES6+) | Dark/Light Mode, Skill Meters, Category Filters, PDF Resume Download, Contact Form Validation |
-| **Task 2** | [NovaCloud SaaS Landing Page](./task-2-landing-page/) | HTML5, CSS3 (Grid & Flexbox), JS | Multi-column layouts, Interactive Monthly/Annual Pricing switch, FAQ Accordion, Sticky Navbar |
-| **Task 3** | [Interactive CSS Grid Calculator](./task-3-calculator/) | HTML5, CSS3 Grid, JavaScript Engine | CSS Grid layout, Keyboard typing support, Calculation history log, Sound synthesis, Precision math |
+| **Portal** | **[CodSoft Master Hub & Live Preview](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/)** | [Launch Portal](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/) | HTML5, CSS3, JS |
+| **Task 1** | **[Personal Developer Portfolio](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/task-1-portfolio/)** | [Launch Portfolio](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/task-1-portfolio/) | HTML5, CSS3, JS (ES6+) |
+| **Task 2** | **[NovaCloud SaaS Landing Page](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/task-2-landing-page/)** | [Launch Landing Page](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/task-2-landing-page/) | CSS Grid, Flexbox, JS |
+| **Task 3** | **[Interactive CSS Grid Calculator](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/task-3-calculator/)** | [Launch Calculator](https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/task-3-calculator/) | CSS Grid Engine, Web Audio |
 
 ---
 
@@ -97,8 +104,9 @@ http://localhost:8000
 
 ## 📝 CodSoft Submission Checklist
 
-- [x] **Repository Naming:** Repo named according to CodSoft guidelines (`CODSOFT_TASKSNO` / `CODSOFT_LEVEL1`).
+- [x] **Repository Naming:** Repo named according to CodSoft guidelines (`CODSOFT_TASKSNO`).
 - [x] **Level 1 Tasks Completed:** All 3 tasks implemented, tested, and fully working.
+- [x] **GitHub Pages Deployed:** Live website enabled at `https://saaaaaaaaaamii.github.io/CODSOFT_TASKSNO/`.
 - [x] **LinkedIn Video Demonstration:**
   - Record a short 1–2 minute screen demo showing the portfolio, landing page, and calculator in action.
   - Tag `@CodSoft` on LinkedIn.
